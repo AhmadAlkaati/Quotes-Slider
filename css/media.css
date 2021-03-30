@@ -1,0 +1,58 @@
+@media (max-width: 700px) {
+  main .slides .slide .slide-number {
+    font-size: 25px;
+  }
+  main .slides .slide .content h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+  main .slides .slide .content h3 {
+    font-size: 15px;
+  }
+  main button i {
+    font-size: 30px;
+  }
+  main .play-slides,
+  main .pause-slides {
+    bottom: 0.2rem;
+    left: 45%;
+  }
+  main .social a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .slides .slide .slide-number {
+    font-size: 20px;
+  }
+  main .slides .slide .content h1 {
+    font-size: 20px;
+  }
+  main .next {
+    right: 0.5rem;
+  }
+  main .prev {
+    left: 0.5rem;
+  }
+  main button:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 450px) {
+  main .play-slides,
+  main .pause-slides {
+    bottom: 0.2rem;
+    left: 42%;
+  }
+}
+
+@media (max-width: 350px) {
+  main .play-slides,
+  main .pause-slides {
+    bottom: 0.2rem;
+    left: 40%;
+  }
+}
+/*# sourceMappingURL=media.css.map */

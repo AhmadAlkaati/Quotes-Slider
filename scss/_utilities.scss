@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Bad Script', cursive;
+}
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}

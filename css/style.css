@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Bad Script', cursive;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+main .slides {
+  width: 80%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+main .slides .slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  transform: translateX(2000px);
+}
+
+main .slides .slide .slide-number {
+  position: relative;
+  bottom: 1rem;
+}
+
+main .slides .slide .content {
+  min-height: 200px;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  font-size: 15px;
+  position: relative;
+}
+
+main .slides .slide .content h1 {
+  font-weight: 400;
+}
+
+main .slides .slide .content h3 {
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+}
+
+main .slides .active {
+  transform: translate(0);
+  transition: 1s transform;
+}
+
+main .slides .right {
+  transform: translateX(2000px);
+  transition: 1s transform;
+  transition-delay: 0.4s;
+}
+
+main .slides .left {
+  transform: translateX(-2000px);
+  transition: 1s transform;
+  transition-delay: 0.4s;
+}
+
+main button {
+  position: absolute;
+  background: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+main button i {
+  font-size: 40px;
+  color: #ece9e9;
+}
+
+main button:hover {
+  transform: scale(1.2);
+}
+
+main .next {
+  right: 1rem;
+  top: 50%;
+}
+
+main .prev {
+  top: 50%;
+  left: 1rem;
+}
+
+main .play-slides,
+main .pause-slides {
+  bottom: 0.2rem;
+  left: 50%;
+}
+
+main .pause-slides {
+  display: none;
+}
+
+main .mute-volume,
+main .unmute-volume {
+  bottom: 0.2rem;
+  left: 1rem;
+}
+
+main .mute-volume {
+  display: none;
+}
+
+main .social {
+  position: absolute;
+  bottom: 0.2rem;
+  right: 1rem;
+  z-index: 1;
+}
+
+main .social a {
+  color: white;
+}
+
+main .social a i {
+  margin: 0 0.3rem;
+}
+
+main::after {
+  background: url("../images/room-heater.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  filter: brightness(70%);
+  background-repeat: no-repeat;
+}
+/*# sourceMappingURL=style.css.map */
