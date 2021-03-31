@@ -55,6 +55,7 @@ main .slides .number-copy {
   justify-content: space-around;
   align-items: center;
   position: relative;
+  top: 3rem;
 }
 
 main .slides .number-copy .copy {

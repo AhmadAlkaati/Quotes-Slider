@@ -1,13 +1,3 @@
-@media (max-width: 1000px) {
-  main {
-    .slides {
-      .copy {
-        bottom: 10rem;
-      }
-    }
-  }
-}
-
 @media (max-width: 700px) {
   main {
     .slides {
@@ -19,6 +9,10 @@
       .slide {
         .slide-number {
           font-size: 25px;
+        }
+        .copy {
+          position: relative;
+          left: 2rem;
         }
 
         .content {
