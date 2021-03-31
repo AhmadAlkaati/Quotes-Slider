@@ -9,6 +9,9 @@
     position: relative;
     left: 2rem;
   }
+  main .slides .slide .content {
+    margin-bottom: 4rem;
+  }
   main .slides .slide .content h1 {
     font-size: 25px;
     text-align: center;
