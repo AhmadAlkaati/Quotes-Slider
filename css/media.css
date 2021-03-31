@@ -1,4 +1,13 @@
+@media (max-width: 1000px) {
+  main .slides .copy {
+    bottom: 10rem;
+  }
+}
+
 @media (max-width: 700px) {
+  main .slides header h1 {
+    font-size: 25px;
+  }
   main .slides .slide .slide-number {
     font-size: 25px;
   }
@@ -41,6 +50,9 @@
 }
 
 @media (max-width: 450px) {
+  main .slides .slide .content {
+    min-height: 250px;
+  }
   main .play-slides,
   main .pause-slides {
     bottom: 0.2rem;

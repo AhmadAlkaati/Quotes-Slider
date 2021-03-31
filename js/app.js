@@ -6,6 +6,7 @@ function main() {
   const audio = document.querySelector('.piano-audio');
   const unmuteVolumeBtn = document.querySelector('.unmute-volume');
   const muteVolumeBtn = document.querySelector('.mute-volume');
+  const copyBtns = document.querySelectorAll('.copy');
 
   let intervalTime = 2000;
   function runEventListeners() {
@@ -14,6 +15,9 @@ function main() {
     playSlidesBtn.addEventListener('click', playSlides);
     unmuteVolumeBtn.addEventListener('click', unmuteVolume);
     muteVolumeBtn.addEventListener('click', muteVolume);
+    copyBtns.forEach((btn) => {
+      btn.addEventListener('click', copyQuote);
+    });
   }
   runEventListeners();
 
@@ -71,6 +75,39 @@ function main() {
     unmuteVolumeBtn.style.display = 'block';
     muteVolumeBtn.style.display = 'none';
     audio.pause();
+  }
+
+  function copyQuote() {
+    const copiedText = document.createElement('textarea');
+    document.body.appendChild(copiedText);
+    slides.forEach((slide) => {
+      if (slide.classList.contains('active')) {
+        const quote = slide.children[1].children[0].innerHTML;
+        const quoteAuthor = slide.children[1].children[1].innerHTML;
+        copiedText.innerHTML = quote + quoteAuthor;
+        console.log(quote);
+      }
+    });
+
+    copiedText.select();
+    document.execCommand('copy');
+    createToolTip();
+  }
+
+  function createToolTip() {
+    const tooltip = document.createElement('span');
+    tooltip.className = 'tooltip';
+    tooltip.innerHTML = 'Copied!';
+    const slidesDivs = document.querySelectorAll('.slides');
+
+    slidesDivs.forEach((slidesDiv) => {
+      const numberCopyDiv = slidesDiv.querySelector('.number-copy');
+      numberCopyDiv.appendChild(tooltip);
+    });
+
+    setTimeout(() => {
+      tooltip.remove();
+    }, 1000);
   }
 }
 main();
