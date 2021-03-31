@@ -37,6 +37,14 @@ main {
       .copy {
         position: static;
         transform: none;
+        color: white;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+          margin-right: 0.4rem;
+        }
       }
       .tooltip {
         display: flex;

@@ -61,6 +61,15 @@ main .slides .number-copy {
 main .slides .number-copy .copy {
   position: static;
   transform: none;
+  color: white;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .slides .number-copy .copy i {
+  margin-right: 0.4rem;
 }
 
 main .slides .number-copy .tooltip {
